@@ -14,11 +14,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-export type ButtonProps = MuiButtonProps & {
-  children: any;
-  className?: any;
-  onClick?: () => void;
-};
+export type ButtonProps = MuiButtonProps & {};
 
 export const Button: FC<ButtonProps> = ({ className, children, ...props }) => {
   const classes = useStyles();
