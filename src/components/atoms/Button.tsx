@@ -10,6 +10,8 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       textTransform: "none",
+      borderRadius: 5,
+      width: 288,
     },
   })
 );

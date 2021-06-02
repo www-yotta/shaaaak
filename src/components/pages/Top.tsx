@@ -1,7 +1,13 @@
 import React, { memo } from "react";
+import { Button } from "components/atoms/Button";
 
 const Top = () => {
-  return <h1>Hello</h1>;
+  return (
+    <div>
+      <h1>Hello</h1>
+      <Button>test</Button>
+    </div>
+  );
 };
 
 export default memo(Top);

@@ -1,7 +1,9 @@
 import React from "react";
 import { Meta } from "@storybook/react";
 
-import { Button, ButtonProps } from "components/atoms/Button";
+import { Button } from "components/atoms/Button";
+import { ThemeProvider } from "@material-ui/styles";
+import theme from "theme";
 
 export default {
   title: "Example/Button",
@@ -13,6 +15,20 @@ const handleClick = () => {
   alert("Click!!");
 };
 
-export const Normal = () => <Button>Hoge</Button>;
+const Template = ({ children }: any) => (
+  <ThemeProvider theme={theme}>{children}</ThemeProvider>
+);
 
-export const Onclick = () => <Button onClick={handleClick}>Hoge</Button>;
+export const Normal = () => (
+  <Template>
+    <Button variant="outlined" color="default">
+      詳細を見る
+    </Button>
+  </Template>
+);
+
+export const Onclick = () => (
+  <Button variant="outlined" color="default" onClick={handleClick}>
+    Hoge
+  </Button>
+);
