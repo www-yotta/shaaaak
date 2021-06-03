@@ -19,9 +19,10 @@ const Template = ({ children }: any) => (
 );
 
 const props: ArticleItemProps = {
-  text: "ここにテキストがはいります。",
+  text:
+    "ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。ここにテキストがはいります。",
   buttonLabel: "詳細を見る",
-  title: "すごいやつ",
+  title: "すごいやつなのでつかってね",
   thumbnailPath: "https://placehold.jp/288x150.png",
 };
 

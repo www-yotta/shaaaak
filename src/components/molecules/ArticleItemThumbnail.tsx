@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme: Theme) =>
       // TODO: themeの色で指定する
       border: "1px solid #707070",
       borderRadius: 10,
+      verticalAlign: "bottom",
     },
   })
 );

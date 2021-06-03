@@ -1,8 +1,11 @@
 import { FC } from "react";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
+import { Spacer } from "components/atoms/Spacer";
 import { Paper } from "components/atoms/Paper";
 import { ArticleItemButton } from "components/molecules/ArticleItemButton";
 import { ArticleItemThumbnail } from "components/molecules/ArticleItemThumbnail";
+import { ArticleItemTitle } from "components/molecules/ArticleItemTitle";
+import { ArticleItemText } from "components/molecules/ArticleItemText";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -33,8 +36,11 @@ export const ArticleItem: FC<ArticleItemProps> = ({
   return (
     <Paper className={classes.root} {...props}>
       <ArticleItemThumbnail src={thumbnailPath} />
-      <p>{title}</p>
-      <p>{text}</p>
+      <Spacer size={8} />
+      <ArticleItemTitle title={title} />
+      <Spacer size={4} />
+      <ArticleItemText text={text} />
+      <Spacer size={4} />
       <ArticleItemButton>{buttonLabel}</ArticleItemButton>
     </Paper>
   );
