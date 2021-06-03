@@ -11,7 +11,6 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       textTransform: "none",
       borderRadius: 5,
-      width: 288,
     },
   })
 );
@@ -21,7 +20,7 @@ export type ButtonProps = MuiButtonProps & {};
 export const Button: FC<ButtonProps> = ({ className, children, ...props }) => {
   const classes = useStyles();
   return (
-    <MuiButton className={clsx(className, classes.root)} {...props}>
+    <MuiButton className={clsx(classes.root, className)} {...props}>
       {children}
     </MuiButton>
   );
