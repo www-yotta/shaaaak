@@ -1,13 +1,13 @@
 import { FC } from "react";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import clsx from "clsx";
+import { colorBlack } from "theme";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       width: "100%",
-      // TODO: themeの色で指定する
-      border: "1px solid #707070",
+      border: `1px solid ${colorBlack}`,
       borderRadius: 10,
       verticalAlign: "bottom",
     },

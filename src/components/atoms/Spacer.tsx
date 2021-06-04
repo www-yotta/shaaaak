@@ -14,7 +14,7 @@ export const Spacer: FC<SpacerProps> = ({
 }) => {
   const width = axis === "vertical" ? 1 : size;
   const height = axis === "horizontal" ? 1 : size;
-  // TODO: jssで書き直す
+  // TODO: jssで書き直す?
   return (
     <span
       style={{

@@ -1,5 +1,6 @@
 import { FC } from "react";
-import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
+import { makeStyles, createStyles } from "@material-ui/core/styles";
+import theme from "theme";
 import { Spacer } from "components/atoms/Spacer";
 import { Paper } from "components/atoms/Paper";
 import { ArticleItemButton } from "components/molecules/ArticleItemButton";
@@ -7,12 +8,11 @@ import { ArticleItemThumbnail } from "components/molecules/ArticleItemThumbnail"
 import { ArticleItemTitle } from "components/molecules/ArticleItemTitle";
 import { ArticleItemText } from "components/molecules/ArticleItemText";
 
-const useStyles = makeStyles((theme: Theme) =>
+const useStyles = makeStyles(() =>
   createStyles({
     root: {
       width: 312,
-      // TODO: themeのspacingで指定する
-      padding: 12,
+      padding: theme.spacing(3),
     },
   })
 );
@@ -36,11 +36,11 @@ export const ArticleItem: FC<ArticleItemProps> = ({
   return (
     <Paper className={classes.root} {...props}>
       <ArticleItemThumbnail src={thumbnailPath} />
-      <Spacer size={8} />
+      <Spacer size={theme.spacing(2)} />
       <ArticleItemTitle title={title} />
-      <Spacer size={4} />
+      <Spacer size={theme.spacing(1)} />
       <ArticleItemText text={text} />
-      <Spacer size={4} />
+      <Spacer size={theme.spacing(1)} />
       <ArticleItemButton>{buttonLabel}</ArticleItemButton>
     </Paper>
   );
