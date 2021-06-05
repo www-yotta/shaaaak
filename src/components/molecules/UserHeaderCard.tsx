@@ -7,7 +7,7 @@ import { Spacer } from "components/atoms/Spacer";
 import { FollowButton } from "components/organisms/FollowButton";
 import theme, { colorBlack } from "theme";
 
-const useStyles = makeStyles((theme: Theme) =>
+const useStyles = makeStyles(() =>
   createStyles({
     root: {
       width: "100%",

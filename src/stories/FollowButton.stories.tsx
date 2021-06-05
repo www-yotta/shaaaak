@@ -1,10 +1,7 @@
 import React from "react";
 import { Meta } from "@storybook/react";
 
-import {
-  FollowButton,
-  FollowButtonProps,
-} from "components/organisms/FollowButton";
+import { FollowButton } from "components/organisms/FollowButton";
 import { ThemeProvider } from "@material-ui/styles";
 import theme from "theme";
 
