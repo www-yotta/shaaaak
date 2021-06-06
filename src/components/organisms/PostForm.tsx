@@ -1,5 +1,7 @@
 import { FC } from "react";
+import { useForm } from "react-hook-form";
 import { makeStyles, createStyles } from "@material-ui/core/styles";
+import { Button } from "components/atoms/Button";
 import { TextField } from "components/atoms/TextField";
 import { Typography } from "components/atoms/Typography";
 import { Paper } from "components/atoms/Paper";
@@ -15,13 +17,25 @@ const useStyles = makeStyles(() =>
     title: {
       fontWeight: "bold",
     },
+    button: {
+      backgroundColor: "#ccff90",
+      width: "100%",
+      "&:hover": {
+        backgroundColor: "#99cc60",
+      },
+    },
   })
 );
 
-export type RegisterFormProps = {};
+export type PostFormProps = {};
 
-export const RegisterForm: FC<RegisterFormProps> = () => {
+export const PostForm: FC<PostFormProps> = () => {
   const classes = useStyles();
+  const { register, handleSubmit } = useForm();
+  const handlePost = (values: any) => {
+    console.log(values);
+  };
+
   return (
     // TODO: 登録フォームを共通化する？
     <Paper className={classes.root}>
@@ -33,6 +47,7 @@ export const RegisterForm: FC<RegisterFormProps> = () => {
         label="タイトル"
         size="small"
         fullWidth
+        {...register("title")}
       />
       <Spacer size={theme.spacing(3)} />
       <TextField
@@ -60,6 +75,14 @@ export const RegisterForm: FC<RegisterFormProps> = () => {
         rowsMax={4}
         rows={4}
       />
+      <Spacer size={theme.spacing(3)} />
+      <Button
+        variant="contained"
+        className={classes.button}
+        onClick={handleSubmit(handlePost)}
+      >
+        投稿する
+      </Button>
     </Paper>
   );
 };
