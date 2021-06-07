@@ -33,6 +33,7 @@ export const PostForm: FC<PostFormProps> = () => {
   const classes = useStyles();
   const { register, handleSubmit } = useForm();
   const handlePost = (values: any) => {
+    // TODO: 登録処理を書く
     console.log(values);
   };
 
@@ -56,6 +57,7 @@ export const PostForm: FC<PostFormProps> = () => {
         label="カテゴリ"
         size="small"
         fullWidth
+        {...register("category")}
       />
       <Spacer size={theme.spacing(3)} />
       <TextField
@@ -64,6 +66,7 @@ export const PostForm: FC<PostFormProps> = () => {
         label="URL"
         size="small"
         fullWidth
+        {...register("url")}
       />
       <Spacer size={theme.spacing(3)} />
       <TextField
@@ -74,6 +77,7 @@ export const PostForm: FC<PostFormProps> = () => {
         multiline
         rowsMax={4}
         rows={4}
+        {...register("message")}
       />
       <Spacer size={theme.spacing(3)} />
       <Button
