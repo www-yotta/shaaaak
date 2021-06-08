@@ -1,5 +1,7 @@
 import { FC } from "react";
+import { useForm } from "react-hook-form";
 import { makeStyles, createStyles } from "@material-ui/core/styles";
+import { Button } from "components/atoms/Button";
 import { TextField } from "components/atoms/TextField";
 import { Typography } from "components/atoms/Typography";
 import { Paper } from "components/atoms/Paper";
@@ -15,6 +17,13 @@ const useStyles = makeStyles(() =>
     title: {
       fontWeight: "bold",
     },
+    button: {
+      backgroundColor: "#ccff90",
+      width: "100%",
+      "&:hover": {
+        backgroundColor: "#99cc60",
+      },
+    },
   })
 );
 
@@ -22,25 +31,34 @@ export type RegisterFormProps = {};
 
 export const RegisterForm: FC<RegisterFormProps> = () => {
   const classes = useStyles();
+  const { register, handleSubmit } = useForm();
+  const handleRegister = (values: any) => {
+    // TODO: 登録処理を書く
+    console.log(values);
+  };
+
   return (
     // TODO: 登録フォームを共通化する？
     <Paper className={classes.root}>
-      <Typography className={classes.title}>新規投稿</Typography>
+      <Typography className={classes.title}>ユーザー登録</Typography>
+
       <Spacer size={theme.spacing(4)} />
       <TextField
         required
         variant="outlined"
-        label="タイトル"
+        label="ユーザー名"
         size="small"
         fullWidth
+        {...register("userName")}
       />
       <Spacer size={theme.spacing(3)} />
       <TextField
         required
         variant="outlined"
-        label="カテゴリ"
+        label="ユーザーID"
         size="small"
         fullWidth
+        {...register("userId")}
       />
       <Spacer size={theme.spacing(3)} />
       <TextField
@@ -49,17 +67,43 @@ export const RegisterForm: FC<RegisterFormProps> = () => {
         label="URL"
         size="small"
         fullWidth
+        {...register("url")}
       />
       <Spacer size={theme.spacing(3)} />
       <TextField
         variant="outlined"
-        label="メッセージ"
+        label="紹介文"
         size="small"
         fullWidth
         multiline
         rowsMax={4}
         rows={4}
+        {...register("userInfo")}
       />
+      <Spacer size={theme.spacing(3)} />
+      <TextField
+        variant="outlined"
+        label="Twitter"
+        size="small"
+        fullWidth
+        {...register("twitter")}
+      />
+      <Spacer size={theme.spacing(3)} />
+      <TextField
+        variant="outlined"
+        label="あなたのサイト"
+        size="small"
+        fullWidth
+        {...register("site")}
+      />
+      <Spacer size={theme.spacing(3)} />
+      <Button
+        variant="contained"
+        className={classes.button}
+        onClick={handleSubmit(handleRegister)}
+      >
+        登録する
+      </Button>
     </Paper>
   );
 };
