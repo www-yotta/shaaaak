@@ -6,6 +6,7 @@ import { TextField } from "components/atoms/TextField";
 import { Typography } from "components/atoms/Typography";
 import { Paper } from "components/atoms/Paper";
 import { Spacer } from "components/atoms/Spacer";
+import { UserImageDropZone } from "components/molecules/UserImageDropZone";
 import theme from "theme";
 
 const useStyles = makeStyles(() =>
@@ -31,7 +32,8 @@ export type RegisterFormProps = {};
 
 export const RegisterForm: FC<RegisterFormProps> = () => {
   const classes = useStyles();
-  const { register, handleSubmit } = useForm();
+  const useFormMethode = useForm();
+  const { register, handleSubmit, control } = useFormMethode;
   const handleRegister = (values: any) => {
     // TODO: 登録処理を書く
     console.log(values);
@@ -41,7 +43,8 @@ export const RegisterForm: FC<RegisterFormProps> = () => {
     // TODO: 登録フォームを共通化する？
     <Paper className={classes.root}>
       <Typography className={classes.title}>ユーザー登録</Typography>
-
+      <Spacer size={theme.spacing(4)} />
+      <UserImageDropZone registerName="file" useFormMethod={useFormMethode} />
       <Spacer size={theme.spacing(4)} />
       <TextField
         required
