@@ -45,7 +45,7 @@ export const RegisterForm: FC<RegisterFormProps> = () => {
       <Typography className={classes.title}>ユーザー登録</Typography>
       <Spacer size={theme.spacing(4)} />
       <UserImageDropZone registerName="file" useFormMethod={useFormMethode} />
-      <Spacer size={theme.spacing(4)} />
+      <Spacer size={theme.spacing(5)} />
       <TextField
         required
         variant="outlined"

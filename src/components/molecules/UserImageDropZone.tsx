@@ -11,6 +11,7 @@ const useStyles = makeStyles(() =>
       border: "1px solid #000",
       borderRadius: "50%",
       overflow: "hidden",
+      margin: "0 auto",
     },
     fileDrop: {
       width: "100%",
