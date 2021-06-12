@@ -5,6 +5,8 @@ import { Box } from "components/atoms/Box";
 import { Typography } from "components/atoms/Typography";
 import { Spacer } from "components/atoms/Spacer";
 import { FollowButton } from "components/organisms/FollowButton";
+import { FaTwitter, FaLink } from "react-icons/fa";
+import { redirectTo } from "utils/redirectTo";
 import theme, { colorBlack } from "theme";
 
 const useStyles = makeStyles(() =>
@@ -22,14 +24,19 @@ const useStyles = makeStyles(() =>
     },
     profile: {
       display: "flex",
+      flexDirection: "column",
       flexGrow: 1,
+      alignItems: "center",
+    },
+    snsWrap: {
+      display: "flex",
     },
     userTextBox: {
       display: "flex",
-      alignItems: "center",
     },
-    userText: {
-      lineHeight: 1,
+    userIcon: {
+      width: 80,
+      height: 80,
     },
     nameText: {
       color: colorBlack,
@@ -39,6 +46,9 @@ const useStyles = makeStyles(() =>
     followText: {
       color: colorBlack,
       fontSize: 12,
+    },
+    pointer: {
+      cursor: "pointer",
     },
   })
 );
@@ -68,21 +78,32 @@ export const UserInfoCard: FC<UserInfoCardProps> = ({
 
   return (
     <Box className={classes.root} {...props}>
-      {/* TODO: snsアイコンでリンク指定 */}
-      <Box>
-        <UserIcon src={avator} />
-        <UserIcon src={avator} />
+      <Box className={classes.snsWrap}>
+        {/* TODO: 色を汎用化 */}
+        <FaTwitter
+          color="#1DA1F2"
+          onClick={() => redirectTo("https://twitter.com/www_yotta")}
+          className={classes.pointer}
+        />
+        <Spacer size={theme.spacing(3)} />
+        <FaLink
+          color="#4B4B4B"
+          onClick={() => redirectTo("https://github.com/www-yotta")}
+          className={classes.pointer}
+        />
       </Box>
       {/* TODO: プロフィール情報を実装 */}
       <Box className={classes.profile}>
-        <UserIcon src={avator} />
+        <UserIcon src={avator} className={classes.userIcon} />
+        <Spacer size={theme.spacing(2)} />
+        <Typography className={classes.nameText}>{name}</Typography>
         <Box className={classes.userTextBox}>
-          <Typography className={classes.userText}>
-            <span className={classes.nameText}>{name}</span>
-            <br />
-            <span className={classes.followText}>
-              フォロワー：{followCount}人
-            </span>
+          <Typography className={classes.followText}>
+            {followCount} フォロー
+          </Typography>
+          <Spacer size={theme.spacing(5)} />
+          <Typography className={classes.followText}>
+            {followerCount} フォロワー
           </Typography>
         </Box>
       </Box>

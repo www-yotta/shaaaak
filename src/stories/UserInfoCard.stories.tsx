@@ -18,7 +18,7 @@ const Template = ({ children }: any) => (
 );
 
 const props: UserInfoCardProps = {
-  avator: "#",
+  avator: "https://placehold.jp/35x35.png",
   followCount: 10,
   followerCount: 10,
   name: "三波　ヨタ",

@@ -2,6 +2,7 @@ import { FC } from "react";
 import { makeStyles, createStyles } from "@material-ui/core/styles";
 import { Box } from "components/atoms/Box";
 import { colorBlack } from "theme";
+import clsx from "clsx";
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -11,19 +12,23 @@ const useStyles = makeStyles(() =>
       borderRadius: "50%",
       border: `1px solid ${colorBlack}`,
       overflow: "hidden",
+      "& img": {
+        width: "100%",
+      },
     },
   })
 );
 
 export type UserIconProps = {
   src: string;
+  className?: string;
 };
 
-export const UserIcon: FC<UserIconProps> = ({ src, ...props }) => {
+export const UserIcon: FC<UserIconProps> = ({ src, className, ...props }) => {
   const classes = useStyles();
 
   return (
-    <Box className={classes.root} {...props}>
+    <Box className={clsx(classes.root, className)} {...props}>
       <img src={src} />
     </Box>
   );
