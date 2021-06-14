@@ -92,7 +92,6 @@ export const UserInfoCard: FC<UserInfoCardProps> = ({
           className={classes.pointer}
         />
       </Box>
-      {/* TODO: プロフィール情報を実装 */}
       <Box className={classes.profile}>
         <UserIcon src={avator} className={classes.userIcon} />
         <Spacer size={theme.spacing(2)} />
