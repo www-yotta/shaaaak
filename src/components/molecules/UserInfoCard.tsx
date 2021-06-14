@@ -14,8 +14,6 @@ const useStyles = makeStyles(() =>
     root: {
       width: "100%",
       display: "flex",
-      // justifyContent: "space-between",
-      // alignItems: "center",
       backgroundColor: "#fff",
       borderRadius: "5px",
       padding: theme.spacing(3),
