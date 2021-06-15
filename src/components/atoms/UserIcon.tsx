@@ -22,7 +22,7 @@ const useStyles = makeStyles(() =>
 export type UserIconProps = {
   src: string;
   className?: string;
-  onClick: MouseEventHandler<HTMLDivElement>;
+  onClick?: MouseEventHandler<HTMLDivElement>;
 };
 
 export const UserIcon: FC<UserIconProps> = ({ src, className, ...props }) => {
