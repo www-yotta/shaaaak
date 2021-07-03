@@ -7,6 +7,7 @@ import { ArticleItemButton } from "components/molecules/ArticleItemButton";
 import { ArticleItemThumbnail } from "components/molecules/ArticleItemThumbnail";
 import { ArticleItemTitle } from "components/molecules/ArticleItemTitle";
 import { ArticleItemText } from "components/molecules/ArticleItemText";
+import clsx from "clsx";
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -22,6 +23,7 @@ export type ArticleItemProps = {
   text: string;
   buttonLabel: string;
   thumbnailPath: string;
+  className?: string;
 };
 
 export const ArticleItem: FC<ArticleItemProps> = ({
@@ -29,12 +31,13 @@ export const ArticleItem: FC<ArticleItemProps> = ({
   text,
   buttonLabel,
   thumbnailPath,
+  className,
   ...props
 }) => {
   const classes = useStyles();
 
   return (
-    <Paper className={classes.root} {...props}>
+    <Paper className={clsx(classes.root, className)} {...props}>
       <ArticleItemThumbnail src={thumbnailPath} />
       <Spacer size={theme.spacing(2)} />
       <ArticleItemTitle title={title} />
