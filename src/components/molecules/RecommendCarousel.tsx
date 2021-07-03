@@ -44,6 +44,7 @@ export const RecommendCarousel: FC<RecommendCarouselProps> = () => {
         <FaCaretLeft />
       </Box>
       <Spacer size={theme.spacing(3)} />
+      {/* TODO: 実際のデータを入れる */}
       <Box className={classes.recommendBox}>
         <ArticleItem
           buttonLabel="詳細を見る"
