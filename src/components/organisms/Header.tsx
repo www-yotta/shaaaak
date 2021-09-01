@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
+import clsx from 'clsx';
 import { Logo } from "components/atoms/Logo";
 import { Spacer } from "components/atoms/Spacer";
 import { HeaderUserIcon } from "components/organisms/HeaderUserIcon";
@@ -32,12 +33,15 @@ const useStyles = makeStyles(() =>
   })
 );
 
-export type HeaderProps = {};
-export const Header: FC<HeaderProps> = () => {
+export type HeaderProps = {
+  className?: string;
+};
+
+export const Header: FC<HeaderProps> = ({className}) => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div className={clsx(classes.root, className)}>
       <Logo />
       <Spacer size={theme.spacing(4)} />
       <input type="text" className={classes.searchInput} />
