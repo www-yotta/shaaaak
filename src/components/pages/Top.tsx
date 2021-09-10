@@ -58,7 +58,6 @@ type List = {
 
 const PageBody:FC = () => {
   const fetcher = (url: string) => fetch(url).then(r => r.json())
-  // TODO: apiのエンドポイントをenvに移動する
   const { data } = useSWR<List[]>(`${process.env.REACT_APP_ENDPOINT}/list`, fetcher);
 
   if(!data) return <></>;
