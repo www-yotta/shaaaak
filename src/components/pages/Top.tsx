@@ -3,98 +3,21 @@ import { Spacer } from "components/atoms/Spacer";
 import { ArticleItem } from "components/molecules/ArticleItem";
 import { Main } from "components/templates/Main";
 import { makeStyles, createStyles } from "@material-ui/core/styles";
+import useSWR from 'swr'
 
 const useStyles = makeStyles(() =>
   createStyles({
-    root: {},
     Article: {
       display: 'flex',
       flexWrap: 'wrap',
       gap: 12,
     },
     ArticleItem: {
-      // marginRight: 12,
-      // marginBottom: 12,
       // NOTE: 三等分から余白の合計を三等分したpxを引いてる
       width: 'calc(33.3333% - 8px)',
-      '&:nth-child(3n)': {
-        // marginRight: 0,
-      }
     }
   })
 );
-
-
-
-// TODO: テストデータ。後で消す。
-const testData = [
-  {
-    title: 'テスト',
-    text: "テキストです",
-    buttonLabel: "ボタンです",
-    thumbnailPath: "https://placehold.jp/288x150.png",
-  },
-  {
-    title: 'テスト',
-    text: "テキストです",
-    buttonLabel: "ボタンです",
-    thumbnailPath: "https://placehold.jp/288x150.png",
-  },
-  {
-    title: 'テスト',
-    text: "テキストです",
-    buttonLabel: "ボタンです",
-    thumbnailPath: "https://placehold.jp/288x150.png",
-  },
-  {
-    title: 'テスト',
-    text: "テキストです",
-    buttonLabel: "ボタンです",
-    thumbnailPath: "https://placehold.jp/288x150.png",
-  },
-  {
-    title: 'テスト',
-    text: "テキストです",
-    buttonLabel: "ボタンです",
-    thumbnailPath: "https://placehold.jp/288x150.png",
-  },
-  {
-    title: 'テスト',
-    text: "テキストです",
-    buttonLabel: "ボタンです",
-    thumbnailPath: "https://placehold.jp/288x150.png",
-  },
-  {
-    title: 'テスト',
-    text: "テキストです",
-    buttonLabel: "ボタンです",
-    thumbnailPath: "https://placehold.jp/288x150.png",
-  },
-  {
-    title: 'テスト',
-    text: "テキストです",
-    buttonLabel: "ボタンです",
-    thumbnailPath: "https://placehold.jp/288x150.png",
-  },
-  {
-    title: 'テスト',
-    text: "テキストです",
-    buttonLabel: "ボタンです",
-    thumbnailPath: "https://placehold.jp/288x150.png",
-  },
-  {
-    title: 'テスト',
-    text: "テキストです",
-    buttonLabel: "ボタンです",
-    thumbnailPath: "https://placehold.jp/288x150.png",
-  },
-  {
-    title: 'テスト',
-    text: "テキストです",
-    buttonLabel: "ボタンです",
-    thumbnailPath: "https://placehold.jp/288x150.png",
-  },
-]
 
 // TODO: organismsに移動する
 type AticleProps = {
@@ -105,11 +28,13 @@ type AticleProps = {
     thumbnailPath: string
   }[],
 }
+
 const Article:FC<AticleProps> = ({data}) => {
   const classes = useStyles()
+
   return (
     <div className={classes.Article}>
-      {data.map((item, index) => {
+      {data.map((item) => {
         return (
           <ArticleItem
             title={item.title}
@@ -124,11 +49,24 @@ const Article:FC<AticleProps> = ({data}) => {
   )
 }
 
+type List = {
+  title:string;
+  text:string;
+  buttonLabel:string;
+  thumbnailPath:string;
+}
+
 const PageBody:FC = () => {
+  const fetcher = (url: string) => fetch(url).then(r => r.json())
+  // TODO: apiのエンドポイントをenvに移動する
+  const { data } = useSWR<List[]>(' http://localhost:3001/list', fetcher);
+
+  if(!data) return <></>;
+
   return (
     <>
       <Spacer size={12} />
-      <Article data={testData} />
+      <Article data={data} />
       <Spacer size={12} />
     </>
   );
