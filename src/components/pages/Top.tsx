@@ -4,6 +4,7 @@ import { ArticleItem } from "components/molecules/ArticleItem";
 import { Main } from "components/templates/Main";
 import { makeStyles, createStyles } from "@material-ui/core/styles";
 import useSWR from 'swr'
+import { fetcher } from 'utils/fetcher'
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -57,8 +58,7 @@ type List = {
 }
 
 const PageBody:FC = () => {
-  const fetcher = (url: string) => fetch(url).then(r => r.json())
-  const { data } = useSWR<List[]>(`${process.env.REACT_APP_ENDPOINT}/list`, fetcher);
+  const { data } = useSWR<List[]>('/list', fetcher);
 
   if(!data) return <></>;
 
