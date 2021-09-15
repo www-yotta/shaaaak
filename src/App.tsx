@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Top from "components/pages/Top";
+import Parts from "components/pages/Parts";
 import { ThemeProvider } from "@material-ui/styles";
 import theme from "theme";
 
@@ -9,7 +10,8 @@ const App = () => {
     <div className="App">
       <ThemeProvider theme={theme}>
         <Router>
-          <Route path="/" component={Top} />
+          <Route exact path="/" component={Top} />
+          <Route path="/parts" component={Parts} />
         </Router>
       </ThemeProvider>
     </div>
