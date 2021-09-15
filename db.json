@@ -1,70 +1,70 @@
 {
-    "list": [
-        {
-          "title": "テスト",
-          "text": "テキストです",
-          "buttonLabel": "ボタンです",
-          "thumbnailPath": "https://placehold.jp/288x150.png"
-        },
-        {
-          "title": "テスト",
-          "text": "テキストです",
-          "buttonLabel": "ボタンです",
-          "thumbnailPath": "https://placehold.jp/288x150.png"
-        },
-        {
-          "title": "テスト",
-          "text": "テキストです",
-          "buttonLabel": "ボタンです",
-          "thumbnailPath": "https://placehold.jp/288x150.png"
-        },
-        {
-          "title": "テスト",
-          "text": "テキストです",
-          "buttonLabel": "ボタンです",
-          "thumbnailPath": "https://placehold.jp/288x150.png"
-        },
-        {
-          "title": "テスト",
-          "text": "テキストです",
-          "buttonLabel": "ボタンです",
-          "thumbnailPath": "https://placehold.jp/288x150.png"
-        },
-        {
-          "title": "テスト",
-          "text": "テキストです",
-          "buttonLabel": "ボタンです",
-          "thumbnailPath": "https://placehold.jp/288x150.png"
-        },
-        {
-          "title": "テスト",
-          "text": "テキストです",
-          "buttonLabel": "ボタンです",
-          "thumbnailPath": "https://placehold.jp/288x150.png"
-        },
-        {
-          "title": "テスト",
-          "text": "テキストです",
-          "buttonLabel": "ボタンです",
-          "thumbnailPath": "https://placehold.jp/288x150.png"
-        },
-        {
-          "title": "テスト",
-          "text": "テキストです",
-          "buttonLabel": "ボタンです",
-          "thumbnailPath": "https://placehold.jp/288x150.png"
-        },
-        {
-          "title": "テスト",
-          "text": "テキストです",
-          "buttonLabel": "ボタンです",
-          "thumbnailPath": "https://placehold.jp/288x150.png"
-        },
-        {
-          "title": "テスト",
-          "text": "テキストです",
-          "buttonLabel": "ボタンです",
-          "thumbnailPath": "https://placehold.jp/288x150.png"
-        }
-    ]
+  "list": [
+    {
+      "title": "テスト",
+      "text": "テキストです",
+      "buttonLabel": "ボタンです",
+      "thumbnailPath": "https://placehold.jp/288x150.png"
+    },
+    {
+      "title": "テスト",
+      "text": "テキストです",
+      "buttonLabel": "ボタンです",
+      "thumbnailPath": "https://placehold.jp/288x150.png"
+    },
+    {
+      "title": "テスト",
+      "text": "テキストです",
+      "buttonLabel": "ボタンです",
+      "thumbnailPath": "https://placehold.jp/288x150.png"
+    },
+    {
+      "title": "テスト",
+      "text": "テキストです",
+      "buttonLabel": "ボタンです",
+      "thumbnailPath": "https://placehold.jp/288x150.png"
+    },
+    {
+      "title": "テスト",
+      "text": "テキストです",
+      "buttonLabel": "ボタンです",
+      "thumbnailPath": "https://placehold.jp/288x150.png"
+    },
+    {
+      "title": "テスト",
+      "text": "テキストです",
+      "buttonLabel": "ボタンです",
+      "thumbnailPath": "https://placehold.jp/288x150.png"
+    },
+    {
+      "title": "テスト",
+      "text": "テキストです",
+      "buttonLabel": "ボタンです",
+      "thumbnailPath": "https://placehold.jp/288x150.png"
+    },
+    {
+      "title": "テスト",
+      "text": "テキストです",
+      "buttonLabel": "ボタンです",
+      "thumbnailPath": "https://placehold.jp/288x150.png"
+    },
+    {
+      "title": "テスト",
+      "text": "テキストです",
+      "buttonLabel": "ボタンです",
+      "thumbnailPath": "https://placehold.jp/288x150.png"
+    },
+    {
+      "title": "テスト",
+      "text": "テキストです",
+      "buttonLabel": "ボタンです",
+      "thumbnailPath": "https://placehold.jp/288x150.png"
+    },
+    {
+      "title": "テスト",
+      "text": "テキストです",
+      "buttonLabel": "ボタンです",
+      "thumbnailPath": "https://placehold.jp/288x150.png"
+    }
+  ]
 }

@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
-import clsx from 'clsx';
+import clsx from "clsx";
 import { Logo } from "components/atoms/Logo";
 import { Spacer } from "components/atoms/Spacer";
 import { HeaderUserIcon } from "components/organisms/HeaderUserIcon";
@@ -37,7 +37,7 @@ export type HeaderProps = {
   className?: string;
 };
 
-export const Header: FC<HeaderProps> = ({className}) => {
+export const Header: FC<HeaderProps> = ({ className }) => {
   const classes = useStyles();
 
   return (

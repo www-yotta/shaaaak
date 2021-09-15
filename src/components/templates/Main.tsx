@@ -1,74 +1,74 @@
 import { FC } from "react";
 import { makeStyles, createStyles } from "@material-ui/core/styles";
 import { Header } from "components/organisms/Header";
-import theme from "theme"
+import theme from "theme";
 
 const useStyles = makeStyles(() =>
   createStyles({
     root: {
-      width: '100%',
+      width: "100%",
     },
     headerWrap: {
-      width: '100%',
+      width: "100%",
       minWidth: 960,
       // display: 'flex',
       // justifyContent: 'center',
       height: 60,
-      backgroundColor: '#FFF',
+      backgroundColor: "#FFF",
     },
     header: {
-      margin: '0 auto',
+      margin: "0 auto",
       width: 960,
       minWidth: 960,
-      transition: '.2s',
-      padding: '0 1rem',
-      [theme.breakpoints.up('md')]: {
+      transition: ".2s",
+      padding: "0 1rem",
+      [theme.breakpoints.up("md")]: {
         padding: 0,
-      }
+      },
     },
     bodyWrap: {
-      width: '100%',
+      width: "100%",
       // display: 'flex',
       // justifyContent: 'center',
       // TODO: themeに移動する
-      backgroundColor: '#DEEBFF'
+      backgroundColor: "#DEEBFF",
     },
     body: {
       width: 960,
-      margin: '0 auto',
-      minHeight: 'calc(100vh - 60px - 30px)',
-      transition: '.2s',
-      padding: '0 1rem',
-      [theme.breakpoints.up('md')]: {
+      margin: "0 auto",
+      minHeight: "calc(100vh - 60px - 30px)",
+      transition: ".2s",
+      padding: "0 1rem",
+      [theme.breakpoints.up("md")]: {
         padding: 0,
-      }
+      },
     },
     footerWrap: {
-      width: '100%',
+      width: "100%",
       minWidth: 960,
       // display: 'flex',
       // justifyContent: 'center',
       height: 30,
-      backgroundColor: '#FFF',
+      backgroundColor: "#FFF",
     },
     footer: {
-      margin: '0 auto',
+      margin: "0 auto",
       width: 960,
-      transition: '.2s',
-      padding: '0 1rem',
-      [theme.breakpoints.up('md')]: {
+      transition: ".2s",
+      padding: "0 1rem",
+      [theme.breakpoints.up("md")]: {
         padding: 0,
-      }
-    }
+      },
+    },
   })
 );
 
 export type MainProps = {
   // TODO: 型定義をする
-  Body: any,
-}
+  Body: any;
+};
 
-export const Main:FC<MainProps> = ({Body}) => {
+export const Main: FC<MainProps> = ({ Body }) => {
   const classes = useStyles();
 
   return (
