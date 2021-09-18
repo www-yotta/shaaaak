@@ -32,9 +32,14 @@ const useStyles = makeStyles(() =>
 
 export type PartsDetailProps = {
   title: string;
+  text: string;
   className?: string;
 };
-export const PartsDetail: FC<PartsDetailProps> = ({ title, className }) => {
+export const PartsDetail: FC<PartsDetailProps> = ({
+  title,
+  text,
+  className,
+}) => {
   const classes = useStyles();
   // TODO: 型定義をしっかりとする
   const [open, setOpen] = useState<any>(null);
@@ -57,7 +62,7 @@ export const PartsDetail: FC<PartsDetailProps> = ({ title, className }) => {
           </Menu>
         </Box>
       </Box>
-      <Typography className={classes.detailText}>testset</Typography>
+      <Typography className={classes.detailText}>{text}</Typography>
     </Box>
   );
 };

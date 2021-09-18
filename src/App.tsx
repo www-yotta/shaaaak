@@ -11,7 +11,7 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <Router>
           <Route exact path="/" component={Top} />
-          <Route path="/parts" component={Parts} />
+          <Route path="/parts/:id" component={Parts} />
         </Router>
       </ThemeProvider>
     </div>

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
+import { makeStyles, createStyles } from "@material-ui/core/styles";
 import { UserIcon } from "components/atoms/UserIcon";
 import { Box } from "components/atoms/Box";
 import { Typography } from "components/atoms/Typography";

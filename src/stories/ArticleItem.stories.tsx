@@ -24,6 +24,7 @@ const props: ArticleItemProps = {
   buttonLabel: "詳細を見る",
   title: "すごいやつなのでつかってね",
   thumbnailPath: "https://placehold.jp/288x150.png",
+  redirectPath: "",
 };
 
 export const Default = () => (

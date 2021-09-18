@@ -52,6 +52,7 @@ export const RecommendCarousel: FC<RecommendCarouselProps> = () => {
           thumbnailPath="https://placehold.jp/288x150.png"
           title="ttets"
           className={classes.recommendItem}
+          redirectPath=""
         />
         <Spacer size={theme.spacing(3)} />
         <ArticleItem
@@ -60,6 +61,7 @@ export const RecommendCarousel: FC<RecommendCarouselProps> = () => {
           thumbnailPath="https://placehold.jp/288x150.png"
           title="ttets"
           className={classes.recommendItem}
+          redirectPath=""
         />
         <Spacer size={theme.spacing(3)} />
         <ArticleItem
@@ -68,6 +70,7 @@ export const RecommendCarousel: FC<RecommendCarouselProps> = () => {
           thumbnailPath="https://placehold.jp/288x150.png"
           title="ttets"
           className={classes.recommendItem}
+          redirectPath=""
         />
         <Spacer size={theme.spacing(3)} />
         <ArticleItem
@@ -76,6 +79,7 @@ export const RecommendCarousel: FC<RecommendCarouselProps> = () => {
           thumbnailPath="https://placehold.jp/288x150.png"
           title="ttets"
           className={classes.recommendItem}
+          redirectPath=""
         />
         <Spacer size={theme.spacing(3)} />
         <ArticleItem
@@ -84,6 +88,7 @@ export const RecommendCarousel: FC<RecommendCarouselProps> = () => {
           thumbnailPath="https://placehold.jp/288x150.png"
           title="ttets"
           className={classes.recommendItem}
+          redirectPath=""
         />
       </Box>
       <Spacer size={theme.spacing(3)} />

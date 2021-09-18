@@ -9,12 +9,14 @@ const useStyles = makeStyles(() =>
       width: 110,
       height: 40,
       verticalAlign: "bottom",
+      cursor: "pointer",
     },
   })
 );
 
 export type LogoProps = {
   className?: string;
+  onClick?: any;
 };
 
 export const Logo: FC<LogoProps> = ({ className, ...props }) => {
