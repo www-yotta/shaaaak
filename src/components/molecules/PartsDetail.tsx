@@ -53,7 +53,9 @@ export const PartsDetail: FC<PartsDetailProps> = ({
   return (
     <Box className={clsx(classes.root, className)}>
       <Box className={classes.detailHeader}>
-        <Typography className={classes.title}>{title}</Typography>
+        <Typography variant="h2" className={classes.title}>
+          {title}
+        </Typography>
         <Box>
           <FaEllipsisH onClick={handleClick} />
           <Menu anchorEl={open} open={Boolean(open)} onClose={handleClose}>

@@ -23,11 +23,13 @@ export const Logo: FC<LogoProps> = ({ className, ...props }) => {
   const classes = useStyles();
 
   return (
-    <img
-      src={logo}
-      alt="Shaaaakのサイトロゴ"
-      className={clsx(classes.root, className)}
-      {...props}
-    />
+    <h1>
+      <img
+        src={logo}
+        alt="Shaaaakのサイトロゴ"
+        className={clsx(classes.root, className)}
+        {...props}
+      />
+    </h1>
   );
 };

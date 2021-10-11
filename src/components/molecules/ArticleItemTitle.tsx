@@ -24,8 +24,8 @@ export const ArticleItemTitle: FC<ArticleItemTitleProps> = ({
   const classes = useStyles();
 
   return (
-    <p className={classes.root} {...props}>
+    <h3 className={classes.root} {...props}>
       {title}
-    </p>
+    </h3>
   );
 };

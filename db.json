@@ -88,5 +88,97 @@
       "thumbnailPath": "https://placehold.jp/288x150.png",
       "sandboxUrl": "https://codesandbox.io/embed/react-new?fontsize=14&hidenavigation=1&theme=dark"
     }
+  ],
+  "recommend": [
+    {
+      "id": 1,
+      "parts": [
+        {
+          "id": 1,
+          "title": "奇麗なボタン",
+          "text": "これは奇麗なボタンです。どうですか？綺麗ですよ",
+          "buttonLabel": "ボタンです",
+          "thumbnailPath": "https://placehold.jp/288x150.png",
+          "sandboxUrl": "https://codesandbox.io/embed/react-new?fontsize=14&hidenavigation=1&theme=dark"
+        },
+        {
+          "id": 2,
+          "title": "かっこいいボタン",
+          "text": "これはかっこいいボタンです。どうですか？かっこいいですよ",
+          "buttonLabel": "ボタンです",
+          "thumbnailPath": "https://placehold.jp/288x150.png",
+          "sandboxUrl": "https://codesandbox.io/embed/react-new?fontsize=14&hidenavigation=1&theme=dark"
+        },
+        {
+          "id": 3,
+          "title": "テスト",
+          "text": "テキストです",
+          "buttonLabel": "ボタンです",
+          "thumbnailPath": "https://placehold.jp/288x150.png",
+          "sandboxUrl": "https://codesandbox.io/embed/react-new?fontsize=14&hidenavigation=1&theme=dark"
+        },
+        {
+          "id": 4,
+          "title": "テスト",
+          "text": "テキストです",
+          "buttonLabel": "ボタンです",
+          "thumbnailPath": "https://placehold.jp/288x150.png",
+          "sandboxUrl": "https://codesandbox.io/embed/react-new?fontsize=14&hidenavigation=1&theme=dark"
+        },
+        {
+          "id": 5,
+          "title": "テスト",
+          "text": "テキストです",
+          "buttonLabel": "ボタンです",
+          "thumbnailPath": "https://placehold.jp/288x150.png",
+          "sandboxUrl": "https://codesandbox.io/embed/react-new?fontsize=14&hidenavigation=1&theme=dark"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "parts": [
+        {
+          "id": 1,
+          "title": "奇麗なボタン",
+          "text": "これは奇麗なボタンです。どうですか？綺麗ですよ",
+          "buttonLabel": "ボタンです",
+          "thumbnailPath": "https://placehold.jp/288x150.png",
+          "sandboxUrl": "https://codesandbox.io/embed/react-new?fontsize=14&hidenavigation=1&theme=dark"
+        },
+        {
+          "id": 2,
+          "title": "かっこいいボタン",
+          "text": "これはかっこいいボタンです。どうですか？かっこいいですよ",
+          "buttonLabel": "ボタンです",
+          "thumbnailPath": "https://placehold.jp/288x150.png",
+          "sandboxUrl": "https://codesandbox.io/embed/react-new?fontsize=14&hidenavigation=1&theme=dark"
+        },
+        {
+          "id": 3,
+          "title": "テスト",
+          "text": "テキストです",
+          "buttonLabel": "ボタンです",
+          "thumbnailPath": "https://placehold.jp/288x150.png",
+          "sandboxUrl": "https://codesandbox.io/embed/react-new?fontsize=14&hidenavigation=1&theme=dark"
+        },
+        {
+          "id": 4,
+          "title": "テスト",
+          "text": "テキストです",
+          "buttonLabel": "ボタンです",
+          "thumbnailPath": "https://placehold.jp/288x150.png",
+          "sandboxUrl": "https://codesandbox.io/embed/react-new?fontsize=14&hidenavigation=1&theme=dark"
+        },
+        {
+          "id": 5,
+          "title": "テスト",
+          "text": "テキストです",
+          "buttonLabel": "ボタンです",
+          "thumbnailPath": "https://placehold.jp/288x150.png",
+          "sandboxUrl": "https://codesandbox.io/embed/react-new?fontsize=14&hidenavigation=1&theme=dark"
+        }
+      ]
+    }
   ]
 }

@@ -4,7 +4,10 @@ import { ArticleItem } from "components/molecules/ArticleItem";
 import { FaCaretLeft, FaCaretRight } from "react-icons/fa";
 import { makeStyles, createStyles } from "@material-ui/core/styles";
 import { Spacer } from "components/atoms/Spacer";
+import { PartsProps } from "components/molecules/Article";
 import theme from "theme";
+import SimpleBar from "simplebar-react";
+import "simplebar/dist/simplebar.css";
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -24,18 +27,31 @@ const useStyles = makeStyles(() =>
       },
     },
     recommendBox: {
+      width: "100%",
       display: "flex",
-      overflowX: "scroll",
       padding: theme.spacing(1, 0),
+      "& .simplebar-content": {
+        display: "flex",
+      },
     },
     recommendItem: {
       minWidth: 200,
+      "& p": {
+        height: 40,
+        display: "-webkit-box",
+        "-webkit-box-orient": "vertical",
+        "-webkit-line-clamp": 2,
+        overflow: "hidden",
+      },
     },
   })
 );
 
-export type RecommendCarouselProps = {};
-export const RecommendCarousel: FC<RecommendCarouselProps> = () => {
+// TODO: 追加機能実装あり
+export type RecommendCarouselProps = {
+  data: PartsProps[];
+};
+export const RecommendCarousel: FC<RecommendCarouselProps> = ({ data }) => {
   const classes = useStyles();
 
   return (
@@ -43,55 +59,25 @@ export const RecommendCarousel: FC<RecommendCarouselProps> = () => {
       <Box className={classes.carouselButton}>
         <FaCaretLeft />
       </Box>
-      <Spacer size={theme.spacing(3)} />
-      {/* TODO: 実際のデータを入れる */}
-      <Box className={classes.recommendBox}>
-        <ArticleItem
-          buttonLabel="詳細を見る"
-          text="aaaaaaaaaaaaaa"
-          thumbnailPath="https://placehold.jp/288x150.png"
-          title="ttets"
-          className={classes.recommendItem}
-          redirectPath=""
-        />
+      <SimpleBar className={classes.recommendBox}>
         <Spacer size={theme.spacing(3)} />
-        <ArticleItem
-          buttonLabel="詳細を見る"
-          text="aaaaaaaaaaaaaa"
-          thumbnailPath="https://placehold.jp/288x150.png"
-          title="ttets"
-          className={classes.recommendItem}
-          redirectPath=""
-        />
+        {data.map((item, index) => {
+          return (
+            <>
+              <ArticleItem
+                buttonLabel={item.buttonLabel}
+                text={item.text}
+                thumbnailPath={item.thumbnailPath}
+                title={item.title}
+                className={classes.recommendItem}
+                redirectPath={`/parts/${item.id}`}
+              />
+              {data.length !== index + 1 && <Spacer size={theme.spacing(3)} />}
+            </>
+          );
+        })}
         <Spacer size={theme.spacing(3)} />
-        <ArticleItem
-          buttonLabel="詳細を見る"
-          text="aaaaaaaaaaaaaa"
-          thumbnailPath="https://placehold.jp/288x150.png"
-          title="ttets"
-          className={classes.recommendItem}
-          redirectPath=""
-        />
-        <Spacer size={theme.spacing(3)} />
-        <ArticleItem
-          buttonLabel="詳細を見る"
-          text="aaaaaaaaaaaaaa"
-          thumbnailPath="https://placehold.jp/288x150.png"
-          title="ttets"
-          className={classes.recommendItem}
-          redirectPath=""
-        />
-        <Spacer size={theme.spacing(3)} />
-        <ArticleItem
-          buttonLabel="詳細を見る"
-          text="aaaaaaaaaaaaaa"
-          thumbnailPath="https://placehold.jp/288x150.png"
-          title="ttets"
-          className={classes.recommendItem}
-          redirectPath=""
-        />
-      </Box>
-      <Spacer size={theme.spacing(3)} />
+      </SimpleBar>
       <Box className={classes.carouselButton}>
         <FaCaretRight />
       </Box>

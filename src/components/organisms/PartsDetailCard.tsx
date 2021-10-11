@@ -34,7 +34,6 @@ export const PartsDetailCard: FC<PartsDetailCardProps> = ({ data }) => {
   return (
     <Box className={classes.root}>
       <PartsSandbox src={data.sandboxUrl} className={classes.sandbox} />
-      {/* TODO: 取得したタイトルを入れる */}
       <PartsDetail title={data.title} text={data.text} />
     </Box>
   );
