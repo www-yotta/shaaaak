@@ -24,6 +24,7 @@ export type ArticleItemProps = {
   buttonLabel: string;
   thumbnailPath: string;
   className?: string;
+  redirectPath: string;
 };
 
 export const ArticleItem: FC<ArticleItemProps> = ({
@@ -32,6 +33,7 @@ export const ArticleItem: FC<ArticleItemProps> = ({
   buttonLabel,
   thumbnailPath,
   className,
+  redirectPath,
   ...props
 }) => {
   const classes = useStyles();
@@ -44,7 +46,9 @@ export const ArticleItem: FC<ArticleItemProps> = ({
       <Spacer size={theme.spacing(1)} />
       <ArticleItemText text={text} />
       <Spacer size={theme.spacing(1)} />
-      <ArticleItemButton>{buttonLabel}</ArticleItemButton>
+      <ArticleItemButton redirectPath={redirectPath}>
+        {buttonLabel}
+      </ArticleItemButton>
     </Paper>
   );
 };

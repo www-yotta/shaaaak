@@ -17,7 +17,7 @@ const Template = ({ children }: any) => (
 
 export const Outlined = () => (
   <Template>
-    <ArticleItemButton variant="outlined" color="default">
+    <ArticleItemButton variant="outlined" color="default" redirectPath="">
       詳細を見る
     </ArticleItemButton>
   </Template>
@@ -25,7 +25,7 @@ export const Outlined = () => (
 
 export const Contained = () => (
   <Template>
-    <ArticleItemButton variant="contained" color="default">
+    <ArticleItemButton variant="contained" color="default" redirectPath="">
       詳細を見る
     </ArticleItemButton>
   </Template>

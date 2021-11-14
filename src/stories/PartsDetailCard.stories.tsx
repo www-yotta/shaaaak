@@ -11,12 +11,22 @@ export default {
   argTypes: {},
 } as Meta;
 
+const data = {
+  id: 1,
+  title: "テスト",
+  text: "テキストです",
+  buttonLabel: "ボタンです",
+  thumbnailPath: "https://placehold.jp/288x150.png",
+  sandboxUrl:
+    "https://codesandbox.io/embed/react-new?fontsize=14&hidenavigation=1&theme=dark",
+};
+
 const Template = ({ children }: any) => (
   <ThemeProvider theme={theme}>{children}</ThemeProvider>
 );
 
 export const Default = () => (
   <Template>
-    <PartsDetailCard src="https://codesandbox.io/embed/react-new?fontsize=14&hidenavigation=1&theme=dark" />
+    <PartsDetailCard data={data} />
   </Template>
 );

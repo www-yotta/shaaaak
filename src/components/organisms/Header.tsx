@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import clsx from "clsx";
 import { Logo } from "components/atoms/Logo";
 import { Spacer } from "components/atoms/Spacer";
@@ -39,10 +39,11 @@ export type HeaderProps = {
 
 export const Header: FC<HeaderProps> = ({ className }) => {
   const classes = useStyles();
+  const history = useHistory();
 
   return (
     <div className={clsx(classes.root, className)}>
-      <Logo />
+      <Logo onClick={() => history.push("/")} />
       <Spacer size={theme.spacing(4)} />
       <input type="text" className={classes.searchInput} />
       <Spacer size={theme.spacing(4)} />

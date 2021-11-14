@@ -17,6 +17,7 @@ const Template = ({ children }: any) => (
 
 export const Default = () => (
   <Template>
-    <RecommendCarousel />
+    {/* TODO: データを入れる */}
+    <RecommendCarousel data={[]} />
   </Template>
 );

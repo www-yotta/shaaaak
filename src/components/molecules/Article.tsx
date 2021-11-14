@@ -16,13 +16,18 @@ const useStyles = makeStyles(() =>
   })
 );
 
-type AticleProps = {
-  data: {
-    title: string;
-    text: string;
-    buttonLabel: string;
-    thumbnailPath: string;
-  }[];
+// TODO: 共通のtypeとして外だしする？
+export type PartsProps = {
+  id: number;
+  title: string;
+  text: string;
+  buttonLabel: string;
+  thumbnailPath: string;
+  sandboxUrl: string;
+};
+
+export type AticleProps = {
+  data: PartsProps[];
 };
 
 export const Article: FC<AticleProps> = ({ data }) => {
@@ -38,6 +43,7 @@ export const Article: FC<AticleProps> = ({ data }) => {
             buttonLabel={item.buttonLabel}
             thumbnailPath={item.thumbnailPath}
             className={classes.ArticleItem}
+            redirectPath={`parts/${item.id}`}
           />
         );
       })}
